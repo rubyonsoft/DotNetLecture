@@ -1,0 +1,16 @@
+CREATE PROCEDURE ProductsList
+ @ProductID int = 0
+AS
+BEGIN
+	-- ProductsList
+	SET NOCOUNT ON;
+
+	IF(@ProductID = 0)
+		SELECT ProductID, ProductName +'('+CompanyName+')' AS ProductName, QuantityPerUnit, UnitPrice, UnitsInStock, UnitsOnOrder
+		FROM Products A
+		INNER JOIN Suppliers B ON A.SupplierID = B.SupplierID
+	ELSE 
+		SELECT ProductID, ProductName, QuantityPerUnit, UnitPrice, UnitsInStock, UnitsOnOrder FROM Products 
+		WHERE ProductID = @ProductID
+
+END
