@@ -1,0 +1,12 @@
+public class ProductsController : Controller
+	{
+		public IActionResult Index()
+		{
+			ProductsService productsService = new ProductsService();
+			string gridData = productsService.GetProductsList();
+			CommonModel model = new CommonModel();
+			model.GridData = gridData;
+
+			return View(model);
+		}
+	}
