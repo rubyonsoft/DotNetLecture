@@ -1,0 +1,4 @@
+public class CommonModel
+	{
+		public string? GridData { get; set; }
+	}
