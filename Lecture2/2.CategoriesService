@@ -1,0 +1,16 @@
+public GridDataTable GetCategoriesList()
+		{
+			string querystring = "CategoriesList";
+
+			Hashtable param = new Hashtable();
+			param.Add("@CategoryID", "0");
+			DataTable dt = DbUtil.GetDataSet(DefaultConnection,  querystring, CommandType.StoredProcedure, param);
+
+			GridDataTable DataTableGrid = new GridDataTable();
+
+			DataTableGrid.Init();
+			string[] columns = { "CategoryID", "CategoryName", "Description" };  // DB Columns
+			DataTableGrid.Columns = columns;
+
+			return DataTableGrid;
+		}
