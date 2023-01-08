@@ -1,0 +1,10 @@
+public IActionResult Index()
+		{
+			CategoriesService categoriesService = new CategoriesService();
+			ProductsService productsService = new ProductsService();
+			CommonModel model = new CommonModel(){
+				GridTable = categoriesService.GetCategoriesList(),
+				GridData = productsService.GetProductsList()
+			};
+			return View(model);
+		}
