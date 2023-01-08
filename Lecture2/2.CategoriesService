@@ -11,6 +11,7 @@ public GridDataTable GetCategoriesList()
 			DataTableGrid.Init();
 			string[] columns = { "CategoryID", "CategoryName", "Description" };  // DB Columns
 			DataTableGrid.Columns = columns;
+			DataTableGrid.DataTableBind(dt, "grid1");
 
 			return DataTableGrid;
 		}
