@@ -4,15 +4,6 @@
 <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
 <script src="~/js/datagrid.js"></script>
 
-<table id="grid1" class="table table-striped table-bordered jambo_table" style="width: 100%">
-    <thead>
-        <tr class="headings">
-            <th class="column-title">ID</th>
-            <th class="column-title">카테고리명</th>
-            <th class="column-title">설명</th>
-        </tr>
-    </thead>
-</table>
 <table id="grid2" class="table table-striped table-bordered jambo_table" style="width: 100%">
         <thead>
             <tr class="headings">
@@ -21,8 +12,9 @@
                 <th class="column-title">설명</th>
             </tr>
         </thead>
-  </table>
- <script>
+</table>
+<table id="grid3" class="table table-striped table-bordered jambo_table" style="width: 100%">  
+<script>
         var dataSet = modelToData("@Model.GridTable.BindingData");
         var dataSet2 = modelToData("@Model.GridData");
 
@@ -50,5 +42,5 @@
                 ],
             });
         });
-    </script>
+</script>
   
