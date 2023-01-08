@@ -1,3 +1,16 @@
+CREATE TABLE "Categories" (
+	"CategoryID" "int" IDENTITY (1, 1) NOT NULL ,
+	"CategoryName" nvarchar (15) NOT NULL ,
+	"Description" "ntext" NULL ,
+	"Picture" "image" NULL ,
+	CONSTRAINT "PK_Categories" PRIMARY KEY  CLUSTERED 
+	(
+		"CategoryID"
+	)
+)
+GO
+ CREATE  INDEX "CategoryName" ON "dbo"."Categories"("CategoryName")
+GO
 CREATE TABLE "Suppliers" (
 	"SupplierID" "int" IDENTITY (1, 1) NOT NULL ,
 	"CompanyName" nvarchar (40) NOT NULL ,
@@ -199,4 +212,25 @@ INSERT "Products"("ProductID","ProductName","SupplierID","CategoryID","QuantityP
 INSERT "Products"("ProductID","ProductName","SupplierID","CategoryID","QuantityPerUnit","UnitPrice","UnitsInStock","UnitsOnOrder","ReorderLevel","Discontinued") VALUES(77,'Original Frankfurter grüne Soße',12,2,'12 boxes',13,32,0,15,0)
 go
 set identity_insert "Products" off
+go
+set quoted_identifier on
+go
+set identity_insert "Categories" on
+go
+ALTER TABLE "Categories" NOCHECK CONSTRAINT ALL
+go
+INSERT "Categories"("CategoryID","CategoryName","Description","Picture") VALUES(1,'Beverages','Soft drinks, coffees, teas, beers, and ales',null)
+INSERT "Categories"("CategoryID","CategoryName","Description","Picture") VALUES(2,'Condiments','Sweet and savory sauces, relishes, spreads, and seasonings',null)
+INSERT "Categories"("CategoryID","CategoryName","Description","Picture") VALUES(3,'Confections','Desserts, candies, and sweet breads',null)
+INSERT "Categories"("CategoryID","CategoryName","Description","Picture") VALUES(4,'Dairy Products','Cheeses',null)
+INSERT "Categories"("CategoryID","CategoryName","Description","Picture") VALUES(5,'Grains/Cereals','Breads, crackers, pasta, and cereal',null)
+INSERT "Categories"("CategoryID","CategoryName","Description","Picture") VALUES(6,'Meat/Poultry','Prepared meats',null)
+INSERT "Categories"("CategoryID","CategoryName","Description","Picture") VALUES(7,'Produce','Dried fruit and bean curd',null)
+INSERT "Categories"("CategoryID","CategoryName","Description","Picture") VALUES(8,'Seafood','Seaweed and fish',null)
+go
+set identity_insert "Categories" off
+go
+ALTER TABLE "Categories" CHECK CONSTRAINT ALL
+go
+set quoted_identifier on
 go
