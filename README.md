@@ -7,5 +7,7 @@ This is a code snippet from a .NET lecture.
 https://www.youtube.com/watch?v=mjqxjm-DzYk
 
 project source It will be updated every time as the lecture progresses.
+
 https://github.com/rubyonsoft/Northwind7
+
 프로젝트 소스, 강의가 진행되면서 매번 업데이트 됩니다.
