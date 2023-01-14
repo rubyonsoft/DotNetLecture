@@ -106,51 +106,65 @@
         <div class="master-wrapper-content">
             <div class="master-column-wrapper">
                 <div class="center-1">
-                    <div class="page login-page">
+                    <div class="page registration-page">
                         <div class="page-title">
-                            <h1>Welcome, Please Sign In!</h1>
+                            <h1>Register</h1>
                         </div>
                         <div class="page-body">
-                            <div class="customer-blocks">
-                                <div class="new-wrapper register-block">
-                                    <div class="title"><strong>New Customer</strong></div>
-                                    <div class="text">By creating an account on our website, you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made.</div>
-                                    <div class="buttons"><button type="button" class="button-1 register-button" onclick="location.href=&quot;https://localhost:7020/register?returnUrl=%2F&quot;">Register</button></div>
-                                </div>
-                                <div class="returning-wrapper fieldset">
-                                    <form id="formLogin" method="post" action="/Home/Login">
-                                        <div class="title"><strong>Returning Customer</strong></div>
-                                        <div class="form-fields">
-                                            <div class="inputs">
-                                                <label for="CustomerID">CustomerID</label>
-                                                <input type="text" data-val="true" data-val-length="&#xC544;&#xC774;&#xB514;&#xC758; &#xAE38;&#xC774;&#xB294; &#xCD5C;&#xC18C; 4&#xC790;&#xC785;&#xB2C8;&#xB2E4;" data-val-length-max="30" data-val-length-min="4" data-val-required="&#xC544;&#xC774;&#xB514;&#xB294; &#xD544;&#xC218; &#xC785;&#xB825;&#xC785;&#xB2C8;&#xB2E4;" id="CustomerID" maxlength="30" name="CustomerID" value=""><span class="required">*</span>
-                                                <span class="text-danger field-validation-valid" data-valmsg-for="CustomerID" data-valmsg-replace="true"></span>
-                                            </div>
-                                            <div class="inputs">
-                                                <label for="Password">Password</label>
-                                                <input type="password" data-val="true" data-val-length="&#xD328;&#xC2A4;&#xC6CC;&#xB4DC; &#xAE38;&#xC774;&#xB294; &#xCD5C;&#xC18C; 4&#xC790;&#xC785;&#xB2C8;&#xB2E4;" data-val-length-max="20" data-val-length-min="4" data-val-required="&#xD328;&#xC2A4;&#xC6CC;&#xB4DC;&#xB294; &#xD544;&#xC218; &#xC785;&#xB825;&#xC785;&#xB2C8;&#xB2E4;" id="Password" maxlength="20" name="Password"><span class="required">*</span>
-                                                <span class="text-danger field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
-                                            </div>
+                            <form id="formRegister" method="post" action="/Home/Register">
+                                <div class="fieldset">
+                                    <div class="title"><strong>Your Personal Details</strong></div>
+                                    <div class="form-fields">
+                                        <div class="inputs">
+                                            <label for="CustomerID">CustomerID</label>
+                                            <input type="text" data-val="true" data-val-length="&#xC544;&#xC774;&#xB514;&#xC758; &#xAE38;&#xC774;&#xB294; &#xCD5C;&#xC18C; 4&#xC790;&#xC785;&#xB2C8;&#xB2E4;" data-val-length-max="30" data-val-length-min="4" data-val-required="&#xC544;&#xC774;&#xB514;&#xB294; &#xD544;&#xC218; &#xC785;&#xB825;&#xC785;&#xB2C8;&#xB2E4;" id="CustomerID" maxlength="30" name="CustomerID" value=""><span class="required">*</span>
+                                            <span class="text-danger field-validation-valid" data-valmsg-for="CustomerID" data-valmsg-replace="true"></span>
                                         </div>
-                                        <div class="buttons"><button type="submit" class="button-1 login-button">Log in</button></div>
-                                        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Kkdb9aCTvZAlCQMIfgI0zVdHPkXOJ19WDZyJ9mWapSr5B2jr69Ft6tkVTJL65aG_GZPSX7IFF2iOCRHcbuNVjPcEZIKePg-K1GNssRzL9fRpGIX2-t30bOTAMLUGKr-_gN5EmZITArQ0vvkLbRk5gM" />
-                                    </form>
+                                        <div class="inputs">
+                                            <label for="ContactName">ContactName</label>
+                                            <input id="ContactName" type="text">
+                                        </div>
+                                        <div class="inputs">
+                                            <label for="Email">Email</label>
+                                            <input type="text" data-val="true" data-val-required="&#xC774;&#xBA54;&#xC77C;&#xC740; &#xD544;&#xC218; &#xC785;&#xB825;&#xC785;&#xB2C8;&#xB2E4;" id="Email" name="Email" value=""><span class="required">*</span>
+                                            <span class="text-danger field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                                <div class="fieldset">
+                                    <div class="title"><strong>Company Details</strong></div>
+                                    <div class="form-fields">
+                                        <div class="inputs">
+                                            <label for="CompanyName">CompanyName</label>
+                                            <input type="text" data-val="true" data-val-length="&#xD68C;&#xC0AC;&#xC758; &#xAE38;&#xC774;&#xB294; &#xCD5C;&#xC18C; 3&#xC790;&#xC785;&#xB2C8;&#xB2E4;" data-val-length-max="30" data-val-length-min="3" data-val-required="&#xD68C;&#xC0AC;&#xB294; &#xD544;&#xC218; &#xC785;&#xB825;&#xC785;&#xB2C8;&#xB2E4;" id="CompanyName" maxlength="30" name="CompanyName" value=""><span class="required">*</span>
+                                            <span class="text-danger field-validation-valid" data-valmsg-for="CompanyName" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fieldset">
+                                    <div class="title"><strong>Your Password</strong></div>
+                                    <div class="form-fields">
+                                        <div class="inputs">
+                                            <label for="Password">Password</label>
+                                            <input type="password" data-val="true" data-val-length="&#xD328;&#xC2A4;&#xC6CC;&#xB4DC; &#xAE38;&#xC774;&#xB294; &#xCD5C;&#xC18C; 4&#xC790;&#xC785;&#xB2C8;&#xB2E4;" data-val-length-max="20" data-val-length-min="4" data-val-required="&#xD328;&#xC2A4;&#xC6CC;&#xB4DC;&#xB294; &#xD544;&#xC218; &#xC785;&#xB825;&#xC785;&#xB2C8;&#xB2E4;" id="Password" maxlength="20" name="Password"><span class="required">*</span>
+                                            <span class="text-danger field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                                        </div>
+                                        <div class="inputs">
+                                            <label>ConfirmPassword</label>
+                                            <input type="password" data-val="true" data-val-required="The ConfirmPassword field is required." id="ConfirmPassword" name="ConfirmPassword"><span class="required">*</span>
+                                            <span class="text-danger field-validation-valid" data-valmsg-for="ConfirmPassword" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="buttons"><button type="submit" name="register-button" id="register-button" class="button-1 register-next-step-button">Register</button></div>
+                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Kkdb9aCTvZAlCQMIfgI0zWrnDu2-pvqhM_HRHRnREIS_gQdKp-coc8l3V6uy41sucTlBYBheTeaesJK4apufE-TUbQo4Y_mIcVjIHoNt4a5-jwB5h-EMmn6c4AZHjR_JULE9rhKihb-XAH_8HnNq0E" />
+                            </form>
                             <div class="external-authentication"></div>
-                            <div class="topic-block">
-                                <div class="topic-block-title">
-                                    <h2>About login / registration</h2>
-                                </div>
-                                <div class="topic-block-body">
-                                    <p>Put your login / registration information here. You can edit this in the admin site.</p>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div> 
+    </div>  
 </body>
 </html>
