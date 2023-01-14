@@ -41,6 +41,7 @@ END CATCH
                                     
 END 
 
+GO
 ------------------------------------------------
 
 CREATE PROCEDURE [dbo].[Customer_Login]  
