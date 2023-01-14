@@ -16,8 +16,6 @@ CREATE TABLE "Customers" (
 	)
 )
 GO
- CREATE  INDEX "City" ON "dbo"."Customers"("City")
-GO
  CREATE  INDEX "CompanyName" ON "dbo"."Customers"("CompanyName")
 GO
  CREATE  INDEX "PostalCode" ON "dbo"."Customers"("PostalCode")
