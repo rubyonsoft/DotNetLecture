@@ -1,0 +1,195 @@
+﻿<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+<div class="master-wrapper-page">
+    <div class="header">
+        <div class="header-lower">
+            <div class="header-logo"><a href="/"> <img alt="nopCommerce demo store" src="https://localhost:7020/images/logo.png"> </a></div>
+            <div class="search-box store-search-box">
+                <form method="get" id="small-search-box-form" action="/search"><input type="text" class="search-box-text ui-autocomplete-input" id="small-searchterms" autocomplete="off" name="q" placeholder="Search store" aria-label="Search store"> <button type="submit" class="button-1 search-box-button">Search</button></form>
+                <ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" unselectable="on" style="display: none;"></ul>
+            </div>
+        </div>
+    </div>
+    <div class="header-menu">
+        <ul class="top-menu notmobile">
+            <li>
+                <a href="/computers">Computers </a>
+                <div class="sublist-toggle"></div>
+                <ul class="sublist first-level">
+                    <li><a href="/desktops">Desktops </a></li>
+                    <li><a href="/notebooks">Notebooks </a></li>
+                    <li><a href="/software">Software </a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="/electronics">Electronics </a>
+                <div class="sublist-toggle"></div>
+                <ul class="sublist first-level">
+                    <li><a href="/camera-photo">Camera &amp; photo </a></li>
+                    <li><a href="/cell-phones">Cell phones </a></li>
+                    <li><a href="/others">Others </a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="/apparel">Apparel </a>
+                <div class="sublist-toggle"></div>
+                <ul class="sublist first-level">
+                    <li><a href="/shoes">Shoes </a></li>
+                    <li><a href="/clothing">Clothing </a></li>
+                    <li><a href="/accessories">Accessories </a></li>
+                </ul>
+            </li>
+            <li><a href="/digital-downloads">Digital downloads </a></li>
+            <li><a href="/books">Books </a></li>
+            <li><a href="/jewelry">Jewelry </a></li>
+            <li><a href="/gift-cards">Gift Cards </a></li>
+        </ul>
+        <div class="menu-toggle">Categories</div>
+        <ul class="top-menu mobile">
+            <li>
+                <a href="/computers">Computers </a>
+                <div class="sublist-toggle"></div>
+                <ul class="sublist first-level">
+                    <li><a href="/desktops">Desktops </a></li>
+                    <li><a href="/notebooks">Notebooks </a></li>
+                    <li><a href="/software">Software </a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="/electronics">Electronics </a>
+                <div class="sublist-toggle"></div>
+                <ul class="sublist first-level">
+                    <li><a href="/camera-photo">Camera &amp; photo </a></li>
+                    <li><a href="/cell-phones">Cell phones </a></li>
+                    <li><a href="/others">Others </a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="/apparel">Apparel </a>
+                <div class="sublist-toggle"></div>
+                <ul class="sublist first-level">
+                    <li><a href="/shoes">Shoes </a></li>
+                    <li><a href="/clothing">Clothing </a></li>
+                    <li><a href="/accessories">Accessories </a></li>
+                </ul>
+            </li>
+            <li><a href="/digital-downloads">Digital downloads </a></li>
+            <li><a href="/books">Books </a></li>
+            <li><a href="/jewelry">Jewelry </a></li>
+            <li><a href="/gift-cards">Gift Cards </a></li>
+        </ul>
+    </div>
+    <div class="master-wrapper-content">
+        <div class="master-column-wrapper">
+            <div class="center-1">
+                <div class="page registration-page">
+                    <div class="page-title">
+                        <h1>Register</h1>
+                    </div>
+                    <div class="page-body">
+                        @model Customer
+                        <form id="formRegister" asp-controller="Home" asp-action="Register" method="post">
+                            <div class="fieldset">
+                                <div class="title"><strong>Your Personal Details</strong></div>
+                                <div class="form-fields">
+                                    <div class="inputs">
+                                        <label asp-for="CustomerID"></label>
+                                        <input asp-for="CustomerID" type="text"><span class="required">*</span>
+                                        <span asp-validation-for="CustomerID" class="text-danger"></span>
+                                    </div>
+                                    <div class="inputs">
+                                        <label asp-for="ContactName"></label>
+                                        <input id="ContactName" type="text">
+                                    </div>
+                                    <div class="inputs">
+                                        <label asp-for="Email"></label>
+                                        <input asp-for="Email" type="text"><span class="required">*</span>
+                                        <span asp-validation-for="Email" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fieldset">
+                                <div class="title"><strong>Company Details</strong></div>
+                                <div class="form-fields">
+                                    <div class="inputs">
+                                        <label asp-for="CompanyName"></label>
+                                        <input asp-for="CompanyName" type="text"><span class="required">*</span>
+                                        <span asp-validation-for="CompanyName" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fieldset">
+                                <div class="title"><strong>Your Password</strong></div>
+                                <div class="form-fields">
+                                    <div class="inputs">
+                                        <label asp-for="Password"></label>
+                                        <input asp-for="Password" type="password"><span class="required">*</span>
+                                        <span asp-validation-for="Password" class="text-danger"></span>
+                                    </div>
+                                    <div class="inputs">
+                                        <label>ConfirmPassword</label>
+                                        <input asp-for="ConfirmPassword" type="password"><span class="required">*</span>
+                                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="buttons"><button type="submit" name="register-button" id="register-button" class="button-1 register-next-step-button">Register</button></div>
+                        </form>
+                        <div class="external-authentication"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @{
+        if (ViewData["message"] != null)
+        {
+            <div id="returnMessage">@ViewData["message"]</div>
+            <script>
+                var msg = $('<div/>').html("@ViewData["message"]").html();
+                alert(msg);
+            </script>
+        } 
+    }
+</div>
+<script type="text/javascript">
+    function CheckValidate() {
+        $("#formRegister").validate({
+            rules: {
+                CustomerID: {
+                    required: true,
+                    rangelength: [3, 15]
+                },
+                CompanyName: {
+                    required: true,
+                    rangelength: [3, 20]
+                },
+                Email: {
+                    required: true,
+                    email: true
+                },
+                Password: {
+                    required: true,
+                    rangelength: [3, 15]
+                },
+                ConfirmPassword: {
+                    required: true,
+                    equalTo: "#Password"
+                }
+            },
+            messages: {
+                CustomerID: {
+                    required: "이름은 필수 입력입니다.",
+                    rangelength: "이름은 {0}자에서 {1}자까지 사용 가능합니다."
+                },
+                Password: {
+                    required: "패스워드는 필수 입력입니다.",
+                    equalTo: "패스워드는 같아야 합니다"
+                },
+            },
+            submitHandler: function () {
+                document.location.href = "/home/login";
+            }
+        });
+    }
+</script>
