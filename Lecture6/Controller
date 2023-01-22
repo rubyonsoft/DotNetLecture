@@ -1,0 +1,10 @@
+public IActionResult List()
+		{
+            ProductsService productsService = new ProductsService();
+			DataViewModel model = new DataViewModel()
+			{
+				GridTable = productsService.GetProductsList2()
+			};
+
+            return View(model);
+		}
