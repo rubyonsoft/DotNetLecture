@@ -14,4 +14,5 @@ https://github.com/rubyonsoft/Northwind7
 
 Update_DBScript : 강의 진행에 따라 업데이트 되는 전체 추가 DB 스크립트입니다
 
-Northwind DB scripts https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs
+Northwind DB scripts 
+https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/databases/northwind-pubs/instnwnd.sql
