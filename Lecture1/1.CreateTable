@@ -1,3 +1,4 @@
+-- all scripts https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs
 CREATE TABLE "Categories" (
 	"CategoryID" "int" IDENTITY (1, 1) NOT NULL ,
 	"CategoryName" nvarchar (15) NOT NULL ,
